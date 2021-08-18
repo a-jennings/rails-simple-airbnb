@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-3">
   <h1>All our Flats (<%= @flats.count %>)</h1>
   <ul>
     <% @flats.each do |flat| %>
@@ -7,10 +7,11 @@
           <div class="card-body">
             <h2><%= flat.name %></h2>
             <h5><%= flat.address %></h3>
-            <i class="fas fa-male"></i>
-            <h6><%= flat.number_of_guests %></h6>
-            <i class="fas fa-pound-sign"></i>
-            <h6><%= flat.price_per_night %></h6>
+            <i class="fas fa-male"></i><h6><%= flat.number_of_guests %></h6>
+            <i class="fas fa-pound-sign"></i><h6><%= flat.price_per_night %></h6>
+          </div>
+          <div class="card-footer">
+            <%= link_to 'More Info', flat_path(flat)%>
           </div>
         </div>
       </li>

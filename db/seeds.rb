@@ -14,4 +14,4 @@
               number_of_guests: rand(1..10))
 end
 
-puts "Seeded #{Flat.count} flats!"
+puts "Seeded #{Flat.count} flats!s"
