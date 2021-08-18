@@ -11,8 +11,11 @@
             <i class="fas fa-pound-sign"></i><h6><%= flat.price_per_night %></h6>
           </div>
           <div class="card-footer">
-            <%= link_to 'More Info', flat_path(flat)%>
-            <%= link_to 'Edit', edit_flat_path(flat)  %>
+            <%= link_to 'More Info', flat_path(flat) , class: "btn btn-outline-primary" %>
+            <%= link_to 'Edit', edit_flat_path(flat) , class: "btn btn-outline-warning" %>
+            <%= link_to 'Delete', flat_path(flat), class: "btn btn-outline-danger",
+                                                   method: :delete,
+                                                   data: { confirm: "Delete flat?"}  %>
           </div>
         </div>
       </li>
